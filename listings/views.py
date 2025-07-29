@@ -1,8 +1,23 @@
+from django.contrib import messages
+from django.shortcuts import redirect
+from .forms import ListingForm
+# Add Listing View
+def add_listing(request):
+    if request.method == 'POST':
+        form = ListingForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Listing added successfully!')
+            return redirect('listings')
+    else:
+        form = ListingForm()
+    return render(request, 'listings/add_listing.html', {'form': form})
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .choices import price_choices, bedroom_choices, state_choices
 
 from .models import Listing
+from django.db.models import Q
 
 def index(request):
   listings = Listing.objects.order_by('-list_date').filter(is_published=True)
@@ -33,7 +48,16 @@ def search(request):
   if 'keywords' in request.GET:
     keywords = request.GET['keywords']
     if keywords:
-      queryset_list = queryset_list.filter(description__icontains=keywords)
+      q = (
+        Q(description__icontains=keywords) |
+        Q(title__icontains=keywords) |
+        Q(address__icontains=keywords) |
+        Q(city__icontains=keywords)
+      )
+      # Special handling for 'garage' keyword
+      if 'garage' in keywords.lower():
+        q = q | Q(garage__gt=0)
+      queryset_list = queryset_list.filter(q)
 
   # City
   if 'city' in request.GET:

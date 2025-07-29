@@ -10,7 +10,7 @@
       <div class="row text-center">
         <div class="col-md-12">
           <h1 class="display-4">About BT Real Estate</h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <p class="lead">BT Real Estate is your trusted partner in finding the perfect property. With years of experience, we provide expert guidance for buyers, sellers, and renters.</p>
         </div>
       </div>
     </div>
@@ -36,11 +36,9 @@
       <div class="row">
         <div class="col-md-8">
           <h2>We Search For The Perfect Home</h2>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <p class="lead">Our dedicated team works tirelessly to find homes that match your lifestyle and budget. Trust us to make your property dreams a reality.</p>
           <img src="{% static 'img/about.jpg' %}" alt="">
-          <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+          <p class="mt-4">With a commitment to excellence, BT Real Estate offers personalized service, market expertise, and a wide selection of properties to meet your needs.</p>
         </div>
         <div class="col-md-4">
           {% if mvp_realtors %}
@@ -64,7 +62,7 @@
   <!-- Work -->
   <section id="work" class="bg-dark text-white text-center">
     <h2 class="display-4">We Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+    <h4>Committed to providing exceptional service, we guide you through every step of the buying, selling, or renting process.</h4>
     <hr>
     <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
   </section>
@@ -73,11 +71,12 @@
   <section id="team" class="py-5">
     <div class="container">
       <h2 class="text-center">Our Team</h2>
-      <div class="row text-center">
+      <p class="text-center mb-4">Meet the dedicated professionals who make BT Real Estate your trusted partner in property buying, selling, and renting.</p>
+      <!-- <div class="row">
         {% if realtors %}
           {% for realtor in realtors %}
-          <div class="col-md-4">
-              <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-3">
+          <div class="col-md-4 text-center mb-4">
+              <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
               <h4>{{ realtor.name }}</h4>
               <p class="text-success">
                 <i class="fas fa-award text-success mb-3"></i> Realtor</p>
@@ -93,7 +92,7 @@
             <p>No Realtors Available</p>
           </div>
         {% endif %}       
-      </div>
+      </div> -->
     </div>
   </section>
 {% endblock %}

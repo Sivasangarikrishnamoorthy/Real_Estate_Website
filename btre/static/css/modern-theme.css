@@ -1,0 +1,123 @@
+/* Modern Attractive Theme for BT Real Estate */
+
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #222;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+}
+
+
+.navbar, .bg-dark {
+  background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+  box-shadow: 0 4px 24px rgba(44,83,100,0.12);
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+
+.btn-primary, .btn-secondary {
+  background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 12px rgba(44,83,100,0.15);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.btn-primary:hover, .btn-secondary:hover {
+  background: linear-gradient(90deg, #0f2027 0%, #36d1c4 100%);
+  box-shadow: 0 6px 24px rgba(44,83,100,0.25);
+  transform: translateY(-2px) scale(1.04);
+}
+
+
+.card {
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px rgba(44,83,100,0.10);
+  border: none;
+  transition: box-shadow 0.3s, transform 0.2s;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(2px);
+  overflow: hidden;
+  animation: fadeInUp 0.7s cubic-bezier(.39,.575,.56,1.000);
+}
+.card:hover {
+  box-shadow: 0 12px 48px rgba(44,83,100,0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.card-img-top, .rounded-circle {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.breadcrumb {
+  background: #e9ecef;
+  border-radius: 0.5rem;
+}
+
+
+section#showcase-inner {
+  background: linear-gradient(120deg, #36d1c4 0%, #5b86e5 100%);
+  color: #fff;
+  border-radius: 0 0 2.5rem 2.5rem;
+  box-shadow: 0 8px 48px rgba(44,83,100,0.12);
+  padding-bottom: 3rem;
+}
+
+
+section#work {
+  background: linear-gradient(90deg, #36d1c4 0%, #5b86e5 100%);
+  color: #fff;
+  border-radius: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 32px rgba(44,83,100,0.10);
+}
+
+
+section#about img {
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px rgba(44,83,100,0.12);
+  margin-bottom: 1.5rem;
+  border: 4px solid #fff;
+}
+
+input, select, textarea {
+  border-radius: 0.5rem !important;
+  border: 1px solid #b2bec3 !important;
+  box-shadow: none !important;
+  transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border: 1.5px solid #36d1c4 !important;
+}
+
+hr {
+  border-top: 2px solid #36d1c4;
+  width: 60px;
+  margin: 1.5rem auto;
+}
+
+.alert {
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+
+footer {
+  background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  border-radius: 2.5rem 2.5rem 0 0;
+  margin-top: 2rem;
+  box-shadow: 0 -4px 32px rgba(44,83,100,0.10);
+}
